@@ -20,25 +20,25 @@ paper_x, paper_y = 11, 9
 # paper_x, paper_y = 9, 11
 # (просто раскоментировать нужную строку и проверить свой код)
 
-if envelop_x >= paper_x:
-    if envelop_y >= paper_y:
-        print('ДА')
-    else:
-        if envelop_x >= paper_y:
-            if envelop_y >= paper_x:
-                print('ДА')
-            else:
-                print('НЕТ')
-        else:
-            print('НЕТ')
-else:
-    if envelop_x >= paper_y:
-        if envelop_y >= paper_x:
-            print('ДА')
-        else:
-            print('НЕТ')
-    else:
-        print('НЕТ')
+# if envelop_x >= paper_x:
+#     if envelop_y >= paper_y:
+#         print('ДА')
+#     else:
+#         if envelop_x >= paper_y:
+#             if envelop_y >= paper_x:
+#                 print('ДА')
+#             else:
+#                 print('НЕТ')
+#         else:
+#             print('НЕТ')
+# else:
+#     if envelop_x >= paper_y:
+#         if envelop_y >= paper_x:
+#             print('ДА')
+#         else:
+#             print('НЕТ')
+#     else:
+#         print('НЕТ')
 
 
 
@@ -70,14 +70,13 @@ brick_x, brick_y, brick_z = 11, 10, 2
 # (просто раскоментировать нужную строку и проверить свой код)
 
 
-if (hole_x >= brick_x and hole_y >= brick_y) or (hole_y >= brick_x and hole_x >= brick_y):
-    print('DA')
+if (hole_x >= brick_x <= hole_y) and (hole_x >= brick_y <= hole_y):
+    print('Да')
+elif (hole_x >= brick_z <= hole_y) and (hole_x >= brick_y <= hole_y):
+    print('Да')
+elif (hole_x >= brick_x <= hole_y) and (hole_x >= brick_z <= hole_y):
+    print('Да')
 else:
-    if (hole_x >= brick_z and hole_y >= brick_y) or (hole_y >= brick_z and hole_x >= brick_y):
-        print('Da')
-    else:
-        if (hole_x >= brick_x and hole_x >= brick_z) or (hole_y >= brick_x and hole_x >= brick_z):
-            print('Da')
-        else:
-            print('Mda')
+    print('Нет')
+
 
